@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#050608" />
+<title>G.U.H.A.N.</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="ambient"></div>
+<header class="topbar">
+  <div class="brand"><span class="status-dot"></span><span>G.U.H.A.N.</span></div>
+  <div class="top-status"><span id="assistantMode">ONLINE</span><span id="pipelineMode" class="session-pill">READY</span><span id="voiceSession" class="session-pill" hidden>VOICE SESSION</span></div>
+</header>
+<main class="app">
+  <section class="hero">
+    <div class="orb" id="orb" aria-hidden="true"><span></span></div>
+    <div class="identity">G . U . H . A . N .</div>
+    <p class="tagline">Your mind. My tools.</p>
+    <p class="subtag">Calm. Capable. Ready.</p>
+
+    <div class="prompt-card" id="promptCard">
+      <span class="wave">⌁</span>
+      <span id="promptText">Hey G.U.H.A.N., what do you need?</span>
+    </div>
+
+    <button id="mic" class="mic" type="button" aria-label="Talk to G.U.H.A.N.">
+      <span class="mic-bars"><i></i><i></i><i></i><i></i><i></i></span>
+    </button>
+    <p id="listenState" class="listen">Tap to speak</p>
+
+    <div class="quick-row">
+      <button id="toolsBtn" class="quick" type="button"><span>••••</span><small>Tools</small></button>
+      <button id="assistantSetup" class="quick" type="button"><span>⚙</span><small>Settings</small></button>
+    </div>
+    <div class="trust">POWERED BY AI&nbsp;&nbsp;·&nbsp;&nbsp;SECURE&nbsp;&nbsp;·&nbsp;&nbsp;USER CONTROLLED</div>
+    <div id="actionState" class="action-state" aria-live="polite"></div>
+  </section>
+
+  <section class="conversation" id="conversation">
+    <div class="conversation-head"><span>CONVERSATION</span><button id="clearChat" type="button">CLEAR</button></div>
+    <div id="messages" class="messages">
+      <div class="msg jarvis"><span class="avatar">G</span><div><small>G.U.H.A.N.</small><p>Systems operational. Awaiting your command.</p></div></div>
+    </div>
+    <form id="chatForm" class="composer">
+      <input id="input" autocomplete="off" placeholder="Message G.U.H.A.N." aria-label="Message G.U.H.A.N." />
+      <button id="stopResponse" type="button" aria-label="Stop response" hidden>■</button><button type="submit" aria-label="Send">↑</button>
+    </form>
+  </section>
+
+  <section class="confirm-panel" id="confirmPanel" hidden aria-live="polite">
+  <div class="confirm-kicker">ACTION REQUEST</div>
+  <h2 id="confirmTitle">G.U.H.A.N. needs your confirmation</h2>
+  <p id="confirmDescription">An external action is ready to be performed.</p>
+  <div class="confirm-actions"><button id="confirmCancel" type="button">Cancel</button><button id="confirmApprove" type="button">Continue</button></div>
+</section>
+
+<section class="tools-panel" id="toolsPanel" hidden>
+    <div class="panel-title"><span>TOOLS</span><button id="closeTools" type="button">×</button></div>
+    <div class="tool-grid">
+      <button data-command="open maps">Maps</button>
+      <button data-command="open calendar">Calendar</button>
+      <button data-command="open gmail">Gmail</button>
+      <button data-command="open youtube">YouTube</button>
+      <button data-command="open spotify">Spotify</button>
+      <button data-command="AI server status">AI Core</button>
+    </div>
+    <div class="memory-tools"><span><b id="memoryCount">00</b> memories</span><button id="clearMemory" type="button">Clear memory</button></div>
+    <ul id="memoryList"></ul>
+  </section>
+</main>
+<footer>G.U.H.A.N. V16</footer>
+<script src="app.js"></script>
+</body>
+</html>

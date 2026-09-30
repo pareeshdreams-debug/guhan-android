@@ -1,0 +1,1 @@
+{"name":"guhan-agent-v4","private":true,"type":"module","scripts":{"typecheck":"tsc --noEmit"},"dependencies":{"ai":"latest","zod":"latest","@exalabs/ai-sdk":"latest"},"devDependencies":{"@types/node":"latest","typescript":"latest"}}
